@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "categorias",
+  "info": {
+    "name": "categorias",
+    "description": "Categorías a la que corresponden las pinturas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "titulo": {
+      "maxLength": 15,
+      "required": true,
+      "minLength": 3,
+      "type": "string"
+    },
+    "foto": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "pinturas": {
+      "collection": "pinturas",
+      "via": "categoria"
+    }
+  }
+}
