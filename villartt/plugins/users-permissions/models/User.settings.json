@@ -52,6 +52,11 @@
     "pintura": {
       "model": "pinturas",
       "via": "Artista"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
     }
   },
   "collectionName": "users-permissions_user"
