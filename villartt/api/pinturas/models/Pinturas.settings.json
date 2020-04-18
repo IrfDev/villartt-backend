@@ -22,7 +22,7 @@
       "required": true
     },
     "fotos": {
-      "model": "file",
+      "collection": "file",
       "via": "related",
       "plugin": "upload"
     },
@@ -41,6 +41,9 @@
     "categoria": {
       "model": "categorias",
       "via": "pinturas"
+    },
+    "Color": {
+      "type": "string"
     }
   }
 }

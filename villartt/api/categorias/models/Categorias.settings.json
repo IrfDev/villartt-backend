@@ -12,7 +12,7 @@
   },
   "attributes": {
     "titulo": {
-      "maxLength": 15,
+      "maxLength": 10,
       "required": true,
       "minLength": 3,
       "type": "string"
@@ -26,6 +26,11 @@
     "pinturas": {
       "collection": "pinturas",
       "via": "categoria"
+    },
+    "Descripción": {
+      "minLength": 10,
+      "maxLength": 180,
+      "type": "text"
     }
   }
 }
