@@ -10,6 +10,7 @@ module.exports = ({ env }) => ({
                 database: env('DATABASE_NAME', 'villartt-back-end'),
                 username: env('DATABASE_USERNAME', ''),
                 password: env('DATABASE_PASSWORD', ''),
+                uri: env('DATABASE_URI')
             },
             options: {
                 authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
