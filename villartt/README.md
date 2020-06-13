@@ -1,3 +1,3 @@
-# villartt
+# Strapi application
 
-A quick description of villartt.
+A quick description of your strapi application
