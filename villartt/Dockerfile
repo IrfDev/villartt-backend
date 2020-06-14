@@ -1,4 +1,3 @@
-FROM ubuntu
 FROM strapi/base
 
 WORKDIR ./strapi-dashboard
