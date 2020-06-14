@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pinturas",
+  "info": {
+    "name": "pinturas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "cliente": {
+      "type": "string"
+    },
+    "Color": {
+      "type": "string"
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "fecha": {
+      "type": "date"
+    },
+    "fotos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "categorias": {
+      "collection": "categorias",
+      "via": "pinturas"
+    },
+    "user": {
+      "columnName": "Artista",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

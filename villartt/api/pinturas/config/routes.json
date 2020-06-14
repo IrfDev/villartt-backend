@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pinturas",
+      "handler": "pinturas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pinturas/count",
+      "handler": "pinturas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pinturas/:id",
+      "handler": "pinturas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pinturas",
+      "handler": "pinturas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pinturas/:id",
+      "handler": "pinturas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pinturas/:id",
+      "handler": "pinturas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

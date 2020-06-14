@@ -1,14 +1,15 @@
+FROM ubuntu
 FROM strapi/base
 
-WORKDIR /
+WORKDIR ./strapi-dashboard
 
-COPY ./package*.json ./
+COPY package*.json ./
 
 RUN npm install
 
 COPY . .
 
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 RUN npm run build
 

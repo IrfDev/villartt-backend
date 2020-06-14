@@ -11,15 +11,16 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "dotenv": "^8.2.0",
     "strapi": "3.0.1",
     "strapi-admin": "3.0.1",
-    "strapi-utils": "3.0.1",
-    "strapi-plugin-content-type-builder": "3.0.1",
+    "strapi-connector-mongoose": "3.0.1",
     "strapi-plugin-content-manager": "3.0.1",
-    "strapi-plugin-users-permissions": "3.0.1",
+    "strapi-plugin-content-type-builder": "3.0.1",
     "strapi-plugin-email": "3.0.1",
     "strapi-plugin-upload": "3.0.1",
-    "strapi-connector-mongoose": "3.0.1"
+    "strapi-plugin-users-permissions": "3.0.1",
+    "strapi-utils": "3.0.1"
   },
   "author": {
     "name": "A Strapi developer"
