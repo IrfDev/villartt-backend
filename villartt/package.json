@@ -1,36 +1,36 @@
 {
-  "name": "villartt-back-end",
-  "private": true,
-  "version": "0.1.0",
-  "description": "A Strapi application",
-  "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
-  },
-  "devDependencies": {},
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "strapi": "3.0.1",
-    "strapi-admin": "3.0.1",
-    "strapi-connector-mongoose": "3.0.1",
-    "strapi-plugin-content-manager": "3.0.1",
-    "strapi-plugin-content-type-builder": "3.0.1",
-    "strapi-plugin-email": "3.0.1",
-    "strapi-plugin-upload": "3.0.1",
-    "strapi-plugin-users-permissions": "3.0.1",
-    "strapi-utils": "3.0.1"
-  },
-  "author": {
-    "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "3cec15c0-0f89-4b30-989e-9f8443f0c114"
-  },
-  "engines": {
-    "node": ">=10.0.0",
-    "npm": ">=6.0.0"
-  },
-  "license": "MIT"
+    "name": "villartt-back-end",
+    "private": true,
+    "version": "0.1.0",
+    "description": "A Strapi application",
+    "scripts": {
+        "develop": "strapi develop",
+        "start": "strapi start",
+        "build": "strapi build",
+        "strapi": "strapi"
+    },
+    "devDependencies": {},
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "strapi": "3.0.1",
+        "strapi-admin": "3.0.1",
+        "strapi-connector-mongoose": "3.0.1",
+        "strapi-plugin-content-manager": "3.0.1",
+        "strapi-plugin-content-type-builder": "3.0.1",
+        "strapi-plugin-email": "3.0.1",
+        "strapi-plugin-upload": "3.0.1",
+        "strapi-plugin-users-permissions": "3.0.1",
+        "strapi-utils": "3.0.1"
+    },
+    "author": {
+        "name": "A Strapi developer"
+    },
+    "strapi": {
+        "uuid": "3cec15c0-0f89-4b30-989e-9f8443f0c114"
+    },
+    "engines": {
+        "node": "12.0.0",
+        "npm": ">=6.0.0"
+    },
+    "license": "MIT"
 }

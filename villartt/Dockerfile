@@ -1,4 +1,4 @@
-FROM strapi/base
+FROM strapi/base:10-alpine
 
 WORKDIR ./strapi-dashboard
 
