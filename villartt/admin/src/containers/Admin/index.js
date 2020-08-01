@@ -4,46 +4,46 @@
  *
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import axios from 'axios';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
-import { bindActionCreators, compose } from 'redux';
-import { Switch, Route } from 'react-router-dom';
-import { injectIntl } from 'react-intl';
-import { isEmpty } from 'lodash';
+import React from "react";
+import PropTypes from "prop-types";
+import axios from "axios";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { bindActionCreators, compose } from "redux";
+import { Switch, Route } from "react-router-dom";
+import { injectIntl } from "react-intl";
+import { isEmpty } from "lodash";
 // Components from strapi-helper-plugin
 import {
   difference,
   GlobalContextProvider,
   LoadingIndicatorPage,
   OverlayBlocker,
-} from 'strapi-helper-plugin';
-import { SETTINGS_BASE_URL, SHOW_TUTORIALS } from '../../config';
+} from "strapi-helper-plugin";
+import { SETTINGS_BASE_URL, SHOW_TUTORIALS } from "../../config";
 
-import Header from '../../components/Header/index';
-import Logout from '../../components/Logout';
-import NavTopRightWrapper from '../../components/NavTopRightWrapper';
-import LeftMenu from '../LeftMenu';
-import InstalledPluginsPage from '../InstalledPluginsPage';
-import LocaleToggle from '../LocaleToggle';
-import HomePage from '../HomePage';
-import MarketplacePage from '../MarketplacePage';
-import NotFoundPage from '../NotFoundPage';
-import OnboardingVideos from '../Onboarding';
-import SettingsPage from '../SettingsPage';
-import PluginDispatcher from '../PluginDispatcher';
+import Header from "../../components/Header/index";
+import Logout from "../../components/Logout";
+import NavTopRightWrapper from "../../components/NavTopRightWrapper";
+import LeftMenu from "../LeftMenu";
+import InstalledPluginsPage from "../InstalledPluginsPage";
+import LocaleToggle from "../LocaleToggle";
+import HomePage from "../HomePage";
+import MarketplacePage from "../MarketplacePage";
+import NotFoundPage from "../NotFoundPage";
+import OnboardingVideos from "../Onboarding";
+import SettingsPage from "../SettingsPage";
+import PluginDispatcher from "../PluginDispatcher";
 import {
   disableGlobalOverlayBlocker,
   enableGlobalOverlayBlocker,
   updatePlugin,
-} from '../App/actions';
-import makeSelecApp from '../App/selectors';
-import { setAppError } from './actions';
-import makeSelectAdmin from './selectors';
-import Wrapper from './Wrapper';
-import Content from './Content';
+} from "../App/actions";
+import makeSelecApp from "../App/selectors";
+import { setAppError } from "./actions";
+import makeSelectAdmin from "./selectors";
+import Wrapper from "./Wrapper";
+import Content from "./Content";
 
 export class Admin extends React.Component {
   // eslint-disable-line react/prefer-stateless-function
@@ -53,7 +53,7 @@ export class Admin extends React.Component {
   };
 
   componentDidMount() {
-    this.emitEvent('didAccessAuthenticatedAdministration');
+    this.emitEvent("didAccessAuthenticatedAdministration");
   }
 
   shouldComponentUpdate(prevProps) {
@@ -63,10 +63,10 @@ export class Admin extends React.Component {
   /* istanbul ignore next */
   componentDidCatch(error, info) {
     /* eslint-disable */
-    console.log('An error has occured');
-    console.log('--------------------');
+    console.log("An error has occured");
+    console.log("--------------------");
     console.log(error);
-    console.log('Here is some infos');
+    console.log("Here is some infos");
     console.log(info);
     /* eslint-enable */
 
@@ -81,7 +81,7 @@ export class Admin extends React.Component {
 
     if (uuid) {
       try {
-        await axios.post('https://analytics.strapi.io/track', {
+        await axios.post("https://analytics.strapi.io/track", {
           event,
           properties,
           uuid,
@@ -92,12 +92,14 @@ export class Admin extends React.Component {
     }
   };
 
-  hasApluginNotReady = props => {
+  hasApluginNotReady = (props) => {
     const {
       global: { plugins },
     } = props;
 
-    return !Object.keys(plugins).every(plugin => plugins[plugin].isReady === true);
+    return !Object.keys(plugins).every(
+      (plugin) => plugins[plugin].isReady === true
+    );
   };
 
   /**
@@ -119,14 +121,16 @@ export class Admin extends React.Component {
       if (InitializerComponent) {
         const key = plugins[current].id;
 
-        acc.push(<InitializerComponent key={key} {...this.props} {...this.helpers} />);
+        acc.push(
+          <InitializerComponent key={key} {...this.props} {...this.helpers} />
+        );
       }
 
       return acc;
     }, []);
   };
 
-  renderPluginDispatcher = props => {
+  renderPluginDispatcher = (props) => {
     // NOTE: Send the needed props instead of everything...
 
     return <PluginDispatcher {...this.props} {...props} {...this.helpers} />;
@@ -171,7 +175,7 @@ export class Admin extends React.Component {
         enableGlobalOverlayBlocker={enableGlobalOverlayBlocker}
         formatMessage={formatMessage}
         plugins={plugins}
-        settingsBaseURL={SETTINGS_BASE_URL || '/settings'}
+        settingsBaseURL={SETTINGS_BASE_URL || "/settings"}
         updatePlugin={updatePlugin}
       >
         <Wrapper>
@@ -185,24 +189,33 @@ export class Admin extends React.Component {
             <Header />
             <Content>
               <Switch>
-                <Route path="/" render={props => this.renderRoute(props, HomePage)} exact />
-                <Route path="/plugins/:pluginId" render={this.renderPluginDispatcher} />
+                <Route
+                  path="/"
+                  render={(props) => this.renderRoute(props, HomePage)}
+                  exact
+                />
+                <Route
+                  path="/plugins/:pluginId"
+                  render={this.renderPluginDispatcher}
+                />
                 <Route
                   path="/list-plugins"
-                  render={props => this.renderRoute(props, InstalledPluginsPage)}
+                  render={(props) =>
+                    this.renderRoute(props, InstalledPluginsPage)
+                  }
                   exact
                 />
                 <Route
                   path="/marketplace"
-                  render={props => this.renderRoute(props, MarketplacePage)}
+                  render={(props) => this.renderRoute(props, MarketplacePage)}
                 />
                 <Route
-                  path={`${SETTINGS_BASE_URL || '/settings'}/:settingId`}
-                  render={props => this.renderRoute(props, SettingsPage)}
+                  path={`${SETTINGS_BASE_URL || "/settings"}/:settingId`}
+                  render={(props) => this.renderRoute(props, SettingsPage)}
                 />
                 <Route
-                  path={SETTINGS_BASE_URL || '/settings'}
-                  render={props => this.renderRoute(props, SettingsPage)}
+                  path={SETTINGS_BASE_URL || "/settings"}
+                  render={(props) => this.renderRoute(props, SettingsPage)}
                   exact
                 />
                 <Route key="7" path="" component={NotFoundPage} />
@@ -225,7 +238,7 @@ export class Admin extends React.Component {
 Admin.defaultProps = {
   intl: {
     formatMessage: () => {},
-    locale: 'en',
+    locale: "en",
   },
 };
 

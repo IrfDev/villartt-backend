@@ -12,8 +12,8 @@ exports[`Admin | containers | ListView should match the snapshot 1`] = `
   cursor: pointer;
   outline: 0;
   background-color: #ffffff;
-  background-color: #007EFF;
-  border: 1px solid #007EFF;
+  background-color: #E50092;
+  border: 1px solid #E50092;
   color: #ffffff;
 }
 
@@ -172,7 +172,7 @@ exports[`Admin | containers | ListView should match the snapshot 1`] = `
   height: 54px;
   border: 0;
   border-top: 1px solid #aed4fb;
-  color: #007eff;
+  color: #E50092;
   font-weight: 500;
   text-transform: uppercase;
   background-color: #e6f0fb;
@@ -218,7 +218,7 @@ exports[`Admin | containers | ListView should match the snapshot 1`] = `
 }
 
 .c5 a {
-  color: #007eff;
+  color: #E50092;
 }
 
 .c0 {
@@ -339,7 +339,7 @@ exports[`Admin | containers | ListView should match the snapshot 1`] = `
           type="button"
         >
           <svg
-            fill="#007eff"
+            fill="#E50092"
             height="11px"
             viewBox="0 0 13 13"
             width="11px"
@@ -351,7 +351,7 @@ exports[`Admin | containers | ListView should match the snapshot 1`] = `
               <path
                 d="M6.5.5v12m6-6H.5"
                 fill="none"
-                stroke="#007eff"
+                stroke="#E50092"
                 stroke-linecap="round"
               />
             </g>

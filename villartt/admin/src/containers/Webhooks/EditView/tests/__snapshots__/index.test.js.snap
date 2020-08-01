@@ -12,8 +12,8 @@ exports[`Admin | containers | EditView should match the snapshot 1`] = `
   cursor: pointer;
   outline: 0;
   background-color: #ffffff;
-  background-color: #007EFF;
-  border: 1px solid #007EFF;
+  background-color: #E50092;
+  border: 1px solid #E50092;
   color: #ffffff;
 }
 
@@ -478,7 +478,7 @@ exports[`Admin | containers | EditView should match the snapshot 1`] = `
   font-family: FontAwesome;
   font-size: 9px;
   line-height: 18px;
-  color: #007eff;
+  color: #E50092;
 }
 
 .c8 {
@@ -521,7 +521,7 @@ exports[`Admin | containers | EditView should match the snapshot 1`] = `
 
 .c13 > ul + button {
   padding: 0;
-  color: #007eff;
+  color: #E50092;
   font-size: 13px;
   font-weight: 500;
   outline: 0;
@@ -1092,7 +1092,7 @@ exports[`Admin | containers | EditView should match the snapshot 1`] = `
                     type="button"
                   >
                     <svg
-                      fill="#007eff"
+                      fill="#E50092"
                       height="13px"
                       viewBox="0 0 13 13"
                       width="10px"
@@ -1104,7 +1104,7 @@ exports[`Admin | containers | EditView should match the snapshot 1`] = `
                         <path
                           d="M6.5.5v12m6-6H.5"
                           fill="none"
-                          stroke="#007eff"
+                          stroke="#E50092"
                           stroke-linecap="round"
                         />
                       </g>
