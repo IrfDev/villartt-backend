@@ -36,13 +36,18 @@
       "required": false
     },
     "categorias": {
-      "collection": "categorias",
-      "via": "pinturas"
+      "via": "pinturas",
+      "collection": "categorias"
     },
     "user": {
       "columnName": "Artista",
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "Destacada": {
+      "type": "boolean",
+      "default": false,
+      "unique": false
     }
   }
 }

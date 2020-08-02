@@ -10,14 +10,16 @@
   },
   "attributes": {
     "titulo": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 25
     },
     "Descripci_n": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 50
     },
     "pinturas": {
-      "via": "categorias",
       "collection": "pinturas",
+      "via": "categorias",
       "dominant": true
     },
     "foto": {
