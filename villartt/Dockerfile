@@ -1,4 +1,4 @@
-FROM strapi/base:10-alpine
+FROM strapi/base:12-alpine
 
 WORKDIR ./strapi-dashboard
 
@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-ENV NODE_ENV=production
+ENV NODE_ENV production
 
 RUN npm run build
 
